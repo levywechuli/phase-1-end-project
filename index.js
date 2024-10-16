@@ -31,9 +31,60 @@ startBtn.addEventListener('click', ()=>{
 });
 
 function fetchQuestions(){
-    
+   fetch("http://localhost:3000/questions") 
+   .then(Response =>Response.json())
+   .then(data => {
+       questions=data;
+       displayQuestion();//display my first question
+   })
+   .catch(error =>{
+    console.error('Error fetching questions:', error);
+   });
 }
+ function displayQuestion(){
+    const question = questions[currentQuestionIndex];
+    questionContainer.innerText = question.question;
+    optionContainer.innerHTML="";
 
+    //my radio button options
+    question.options.forEach(option, index => {
+        const radioBtn = document.createElement("input");
+        radioBtn.type = "radio";
+        radioBtn.name = "option";
+        radioBtn.value= option;
+        radioBtn.id = 'option-${index}';
+
+
+        const label = document.createElement("label");
+        label.htmlFor = "option-${index}";
+        label.innerText = option;
+
+        const br = document.createElement("br");
+        
+        optionContainer.appendChild(radioBtn);
+        optionContainer.appendChild(label);
+        optionContainer.appendChild(br);
+    
+    
+    });
+
+    prevBtn.style.display = currentQuestionIndex === 0 ? "none" : "inline";
+
+    //we will have to show the next button if not the last question
+    if (currentQuestionIndex === questions.length -1){
+        nextBtn.style.display = "none";
+        finishBtn.style.display = "inline";
+    }else  {
+            nextBtn.style.display = "inline";
+            finishBtn.style.display = "none";
+    }   
+ }  
+ const selectedAnswer = selectedOption.value;
+ checkAnswer ()
+
+
+
+ 
 
 
 
