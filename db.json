@@ -1,0 +1,119 @@
+{
+    "questions":[
+        {
+            "id":"1",
+            "question":"Who is considered the first computer programmer?",
+            "options":[
+                "Alan Turing",
+                "Grace Hopper",
+                "Ada Lovelace",
+                "Charles Baddage"
+              ],
+            "answer":"Ada Lovelace"
+        },
+        {
+            "id":"2",
+            "question":"Which programming language was the first to be used in commercial application ?",
+            "options":["Python", "COBOL", "Ruby", "Fortran"],
+            "answer":"COBOL"
+        },
+        {
+            "id":"3",
+            "question":"Which of the following is the first high-level programming language?",
+            "options":["Java", "Fortran", "Python", "C++"],
+            "answer":"Fortran"
+        },
+        {
+            "id":"4",
+            "question":"Who developed java progreamming language?",
+            "options":[
+                "James Gosling",
+                "Dennis Ritchie",
+                "Tim Berners-lee",
+                "Guido Van Rossum "
+              ],
+            "answer":"Dennis Ritchie"
+        },
+        {
+            "id":"5",
+            "question":"Which company originally developed the SQL language? ",
+            "options":["Google", "IBM", "Miscrosoft", "Oracle"],
+            "answer":"IBM"
+        },
+        {
+            "id":"6",
+            "question":"Which language was the predecessor to javascript? ",
+            "options":["LiveScript", "Perl", "Ruby", "Python"],
+            "answer":"LiveScript"
+        },
+        {
+            "id":"7",
+            "question":"What was the primary purpose of the pascal programmming language when it was created? ",
+            "options":[
+                "Game develpoment",
+                "Teaching programming",
+                "Artificial Inteligence",
+                "Web development"
+              ],
+            "answer":"Teaching programming"
+        },
+        {
+            "id":"8",
+            "question":"Which language is known for its use in developing enterprise-level applications particularly banking and financial systems",
+            "options":["Java", "COBOL", "Python", "Pascal"],
+            "answer":"Java"
+        },
+        {
+            "id":"9",
+            "question":"Which of the following was the first Object-oriented Programming language?",
+            "options":["Smalltalk", "Simula", "Java", "Lisp"],
+            "answer":"Simula"
+        },
+        {
+            "id":"10",
+            "question":"Who invented the World Wide Web and the Html language ?",
+            "options":["Larry Page", "Alan Turing", "Tim Berners-lee", "Bill Gates"],
+            "answer":"Tim Berners-lee"
+        },
+        {
+            "id":"11",
+            "question":"What was the primary purpose of creating SQL?",
+            "options":[
+                "Web development",
+                "Managing and querying relational database",
+                "Operating system",
+                "Ganning"
+              ],
+            "answer":"Managing and querying relational database"
+        },
+        {
+            "id":"12",
+            "question":"Which language is known for its use in mobile application development for andriod?",
+            "options":["objective-c", "Kotlin", "swift", "c++"],
+            "answer":"Kotlin"
+        },
+        {
+            "id":"13",
+            "question":"Who developed the python programming language?",
+            "options":[
+                "Linus Torvalds",
+                "Larry Wall",
+                "Guido Van Rossum",
+                "James Gosling"
+              ],
+            "answer":"Guido Van Rossum"
+        },
+        {
+            "id":"14",
+            "question":"Which year was PHP first released",
+            "options":["1999", "1995", "2000", "1989"],
+            "answer":"1995"
+        },
+        {
+            "id":"15",
+            "question":"Which programming language was developed specifically for Artifical Inteligence reasearch? ",
+            "options":["Java", "c++", "Lisp", "PHP"],
+            "answer":"Lisp"
+        }
+    ]
+}
