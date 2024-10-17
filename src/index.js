@@ -13,6 +13,9 @@
   const prevBtn = document.getElementById("prev-btn");
   const timeDisplay = document.getElementById("time");
   const startContainer = document.getElementById("start-container");
+ 
+  document.getElementById('quiz-container').style.display = "none"
+  startBtn.style.display ='block'
 
   //creating a finish button
   const finishBtn = document.createElement("button");
@@ -22,6 +25,8 @@
   document.getElementById("quiz-container").appendChild(finishBtn);
 
   startBtn.addEventListener("click", () => {
+    document.getElementById('all-content').style.display = "none";
+    document.getElementById('quiz-container').style.display = 'block';
     startContainer.style.display = "none";
     questionContainer.style.display = "block";
     optionsContainer.style.display = "block";
