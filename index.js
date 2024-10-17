@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+
   const totalTime = 400;
   let timeRemaining = totalTime;
   let score = 0;
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const finishBtn = document.createElement("button");
   finishBtn.id = "finish-btn";
   finishBtn.innerText = "Finish";
-  questionContainer.appendChild(finishBtn);
+  document.getElementById("quiz-container").appendChild(finishBtn);
 
   startBtn.addEventListener("click", () => {
     startContainer.style.display = "none";
@@ -76,7 +76,9 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   nextBtn.addEventListener("click", () => {
-    const selectedOption = document.querySelector('input[name="option"]:checked');
+    const selectedOption = document.querySelector(
+      'input[name="option"]:checked'
+    );
 
     const selectedAnswer = selectedOption.value;
     checkAnswer(selectedAnswer, questions[currentQuestionIndex].answer);
@@ -89,50 +91,58 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //previous button
 
-  prevBtn.addEventListener("click", ()=> {
-
-    if( currentQuestionIndex > 0){
-        currentQuestionIndex--;
-        displayQuestion();
+  prevBtn.addEventListener("click", () => {
+    if (currentQuestionIndex > 0) {
+      currentQuestionIndex--;
+      displayQuestion();
     }
   });
 
   //finish button
   finishBtn.addEventListener("click", () => {
-    const selectedOption = document.querySelector('input[name="option"]:checked');
-    
-    const selectedAnswer =selectedOption.value;
+    const selectedOption = document.querySelector(
+      'input[name="option"]:checked'
+    );
+
+    const selectedAnswer = selectedOption.value;
     checkAnswer(selectedAnswer, questions[currentQuestionIndex].answer);
     endQuiz();
-
   });
 
-  function checkAnswer(selectedAnswer, correct){
-    if(selected === correct){
-        score++;
+  function checkAnswer(selectedAnswer, correct) {
+    if (selected === correct) {
+      score++;
     }
   }
- function startTimer(duration){
+  function startTimer(duration) {
     timeRemaining = duration;
     timeDisplay.innerText = timeRemaining;
 
-    timerInterval = setInterval(()=>{
-        timeRemaining--;
-        timeDisplay.innerText = timeRemaining;
+    timerInterval = setInterval(() => {
+      timeRemaining--;
+      timeDisplay.innerText = timeRemaining;
 
-        if (timeRemaining <=0){
-            clearInterval(timerInterval);
-            endQuiz();
-        }
+      if (timeRemaining <= 0) {
+        clearInterval(timerInterval);
+        endQuiz();
+      }
     }, 1000);
- }
+  }
 
- 
+  //ending the quiz
 
+  function endQuiz() {
+    clearInterval(timerInterval);
+    questionContainer.style.display = "none";
+    optionContainer.style.display = "none";
+    timeDisplay.parentElement.style.display = "none";
+    nextBtn.style.display = "none";
+    prevBtn.style.display = "none";
+    finishBtn.style.display = "none";
 
+    //present my final score
+    const scoreContainer = document.createElement("div");
+    scoreContainer.innerHTML = `<h2> Your Score; ${score} out of ${quiestions.length}</h2>`;
+    document.getElementById(`quiz-container`).appendChild(scoreContainer);
+  }
 
-
-
-
-
-});
