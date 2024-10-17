@@ -113,7 +113,7 @@
             "id":"15",
             "question":"Which programming language was developed specifically for Artifical Inteligence reasearch? ",
             "options":["Java", "c++", "Lisp", "PHP"],
-            "answer":"Lisp"
+            "answer":"lisp"
         }
     ]
 }

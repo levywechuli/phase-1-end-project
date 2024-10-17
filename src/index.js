@@ -1,4 +1,5 @@
-
+ let currentQuestionIndex = 0;
+ let timerInterval;
   const totalTime = 400;
   let timeRemaining = totalTime;
   let score = 0;
@@ -7,7 +8,7 @@
   // getting elements from my html
   const startBtn = document.getElementById("start-btn");
   const questionContainer = document.getElementById("question-container");
-  const optionContainer = document.getElementById("options-container");
+  const optionsContainer = document.getElementById("options-container");
   const nextBtn = document.getElementById("next-btn");
   const prevBtn = document.getElementById("prev-btn");
   const timeDisplay = document.getElementById("time");
@@ -17,13 +18,14 @@
   const finishBtn = document.createElement("button");
   finishBtn.id = "finish-btn";
   finishBtn.innerText = "Finish";
+  finishBtn.style.display = "none"
   document.getElementById("quiz-container").appendChild(finishBtn);
 
   startBtn.addEventListener("click", () => {
     startContainer.style.display = "none";
     questionContainer.style.display = "block";
-    optionContainer.style.display = "block";
-    timeDisplay.style.display = "block";
+    optionsContainer.style.display = "block";
+    timeDisplay.parentElement.style.display = "block";
     startTimer(totalTime);
     fetchQuestions();
   });
@@ -31,36 +33,36 @@
   function fetchQuestions() {
     fetch("http://localhost:3000/questions")
       .then((Response) => Response.json())
-      .then((data) => {
+      .then(data => {
         questions = data;
         displayQuestion(); //display my first question
       })
-      .catch((error) => {
+      .catch(error => {
         console.error("Error fetching questions:", error);
       });
   }
   function displayQuestion() {
     const question = questions[currentQuestionIndex];
     questionContainer.innerText = question.question;
-    optionContainer.innerHTML = "";
+    optionsContainer.innerHTML = '';
 
     //my radio button options
-    question.options.forEach(option, (index) => {
+    question.options.forEach((option, index) => {
       const radioBtn = document.createElement("input");
       radioBtn.type = "radio";
       radioBtn.name = "option";
       radioBtn.value = option;
-      radioBtn.id = "option-${index}";
+      radioBtn.id = `option-${index}`;
 
-      const label = document.createElement("label");
-      label.htmlFor = "option-${index}";
+      const label = document.createElement('label');
+      label.htmlFor = `option-${index}`;
       label.innerText = option;
 
-      const br = document.createElement("br");
+      const br = document.createElement('br');
 
-      optionContainer.appendChild(radioBtn);
-      optionContainer.appendChild(label);
-      optionContainer.appendChild(br);
+      optionsContainer.appendChild(radioBtn);
+      optionsContainer.appendChild(label);
+      optionsContainer.appendChild(br);
     });
 
     prevBtn.style.display = currentQuestionIndex === 0 ? "none" : "inline";
@@ -75,10 +77,14 @@
     }
   }
 
-  nextBtn.addEventListener("click", () => {
+  nextBtn.addEventListener('click', () => {
     const selectedOption = document.querySelector(
       'input[name="option"]:checked'
     );
+    if(!selectedOption){
+      alert('please select an answer.');
+      return;
+    }
 
     const selectedAnswer = selectedOption.value;
     checkAnswer(selectedAnswer, questions[currentQuestionIndex].answer);
@@ -99,17 +105,22 @@
   });
 
   //finish button
-  finishBtn.addEventListener("click", () => {
+  finishBtn.addEventListener('click', () => {
     const selectedOption = document.querySelector(
       'input[name="option"]:checked'
     );
+
+    if(!selectedOption){
+      alert('please select an answer');
+      return;
+    }
 
     const selectedAnswer = selectedOption.value;
     checkAnswer(selectedAnswer, questions[currentQuestionIndex].answer);
     endQuiz();
   });
 
-  function checkAnswer(selectedAnswer, correct) {
+  function checkAnswer(selected, correct) {
     if (selected === correct) {
       score++;
     }
@@ -126,23 +137,23 @@
         clearInterval(timerInterval);
         endQuiz();
       }
-    }, 1000);
+    }, 400);
   }
 
   //ending the quiz
 
   function endQuiz() {
     clearInterval(timerInterval);
-    questionContainer.style.display = "none";
-    optionContainer.style.display = "none";
-    timeDisplay.parentElement.style.display = "none";
-    nextBtn.style.display = "none";
-    prevBtn.style.display = "none";
-    finishBtn.style.display = "none";
+    questionContainer.style.display = 'none';
+    optionsContainer.style.display = 'none';
+    timeDisplay.parentElement.style.display = 'none';
+    nextBtn.style.display = 'none';
+    prevBtn.style.display = 'none';
+    finishBtn.style.display = 'none';
 
     //present my final score
-    const scoreContainer = document.createElement("div");
-    scoreContainer.innerHTML = `<h2> Your Score; ${score} out of ${quiestions.length}</h2>`;
+    const scoreContainer = document.createElement('div');
+    scoreContainer.innerHTML = `<h2> Your Score; ${score} out of ${questions.length}</h2>`;
     document.getElementById(`quiz-container`).appendChild(scoreContainer);
   }
 
