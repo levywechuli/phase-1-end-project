@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
 
 *{
     margin: 0%;
@@ -61,7 +61,7 @@ nav{
 }
 
 #quiz-container{
-    background-color:white;
+    background-color:hsl(0, 20%, 95%);
     color: black;
     padding: 20px;
     border-radius: 8px;
@@ -80,33 +80,91 @@ nav{
 
 }
 span{
+    border: 1px solid;
+    border-radius: 8px;
+    background-color:hsl(41, 30%, 89%) ;
     color: hsl(039, 59%, 41%);
 }
+ 
+h1{
+    padding: 10px;
+    font-size: 50px;
+}
 
-
-p{
-    font-size: 17px;
+h3{
+    font-size: 25px;
+ 
     font-weight: 600;
+    padding: 20PX;
 }
 
 #start-btn{
-    background-color:hsl(24, 33%, 18%);
+    background-color:hsl(039, 59%, 41%);
     color: aliceblue;
     border-radius: 8px;
+    padding: 10px 30px;
+    margin-left: 300px;
+    margin-top: 70px;
+    
+    
+    
 }
-#start-btn.hover{
+#start-btn:hover{
+  background-color: hsl(45, 15%, 22%) ;
 
 }
 #prev-btn{
     background-color:hsl(24, 33%, 18%);
     color: aliceblue;
     border-radius: 8px; 
+    padding: 10px 30px;
+}
+#prev-btn:hover{
+    background-color: hsl(42, 31%, 48%) ;
 }
 
 
 #next-btn{
     background-color:hsl(24, 33%, 18%);
     color: aliceblue;
-    border-radius: 8px; 
+    border-radius: 8px;
+    padding: 10px 30px; 
+    float: right;
 }
 
+#next-btn:hover{
+    background-color:hsl(42, 31%, 48%);
+}
+
+#finish-btn{
+    background-color:hsl(24, 33%, 18%);
+    color: aliceblue;
+    border-radius: 8px;
+    padding: 10px 30px; 
+    float: right;
+
+}
+#finish-btn:hover{
+    background-color: hsl(42, 31%, 48%) ;
+}
+
+#options-container{
+    border: 1px solid;
+    border-radius: 8px;
+    padding-left: 20px;
+    padding: 30px 50px;
+    background-color:hsl(41, 30%, 77%); ;
+}
+#question-container{
+    padding: 20px;
+    font-family: "Crimson Text", serif;
+    font-size: 25px;
+    font-weight: 600;
+}
+#time{
+    font-weight: 700;
+}
+#timer{
+    padding: 20px;
+    font-weight: 700;
+}
