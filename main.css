@@ -1,18 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+
+
 body{
     font-family: Arial, Helvetica, sans-serif;
     margin:0;
     padding: 20px;
-    background-color: ;
+    background-color: hsl(39, 67%, 83%);
+    color:hsl(24, 33%, 18%);
 
 
 }
-#quiz-container{
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px black;
-}
+
 
 .nav-btn {
     margin: 10px;
 }
+
+nav{
+    display: flex;
+    margin-top: 0%;
+    padding-left: 90px;
+  
+   
+
+}
+.top{
+    font-weight: 900;
+    font-size: 50px;
+    font-family:"Dancing Script", serif;
+}
+
+#quiz-container{
+    background-color:hsl(39, 90%, 83%);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px black;
+    width: 50%;
+    float: right;
+    margin-top: 160px;
+    margin-right: 27%;
+    margin-left: 27%;
+    
+
+}
+
+#my ye
