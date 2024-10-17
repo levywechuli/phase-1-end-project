@@ -158,7 +158,7 @@
 
     //present my final score
     const scoreContainer = document.createElement('div');
-    scoreContainer.innerHTML = `<h2> Your Score; ${score} out of ${questions.length}</h2>`;
+    scoreContainer.innerHTML = `<h2> Your Score: ${score} out of ${questions.length}</h2>`;
     document.getElementById(`quiz-container`).appendChild(scoreContainer);
   }
 

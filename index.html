@@ -1,42 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Questopedia</title>
-     <link rel="stylesheet" href="main.css">
-</head>
-<body>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
     <div id="image">
-        <div id="image-overlay">
-         
-        </div>
-    <div id="all-content">
+      <div id="image-overlay"></div>
+      <div id="all-content">
         <div id="my-class">
-            
-        <h1>Welcome To <span>Questopedia</span></h1>
-          <h3>We are thrilled to have you on board and appreciate  your <br> participation.The primary goal for this test is to evaluate your knowledge on <br>the history about programming <br>Feel free to press the start button below to begin your test  </h3>
-            <div id="start-container">
-                <button id="start-btn">Start Quiz</button>
-            </div>
+          <h1>Welcome To <span>Questopedia</span></h1>
+          <h3>
+            We are thrilled to have you on board and appreciate your <br />
+            participation.The primary goal for this test is to evaluate your
+            knowledge on <br />the history about programming <br />Feel free to
+            press the start button below to begin your test
+          </h3>
+          <div id="start-container">
+            <button id="start-btn">Start Quiz</button>
+          </div>
         </div>
-   
+      </div>
     </div>
-   
+    <div id="quiz-container">
+      <h1>Questions</h1>
+
+      <div id="question-container" style="display: none"></div>
+      <div id="options-container" style="display: none"></div>
+
+      <button id="prev-btn" class="nav-btn" style="display: none">
+        previous
+      </button>
+      <button id="next-btn" class="nav-btn" style="display: none">next</button>
+
+      <div id="timer">Time: <span id="time">400sec </span></div>
     </div>
-<div id="quiz-container">
-    <h1>Questions</h1>
-   
-    <div id="question-container" style="display: none;" ></div>
-    <div id="options-container" style="display: none;" ></div>
-
-    <button id="prev-btn" class="nav-btn" style="display: none;">previous</button>
-    <button id="next-btn" class="nav-btn" style="display:none ;">next</button>
-
-    <div id="timer">Time: <span id="time">400sec </span></div>
-   
-
-</div>
     <script src="./src/index.js"></script>
-</body>
+  </body>
 </html>
