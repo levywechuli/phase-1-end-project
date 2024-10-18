@@ -21,11 +21,11 @@ Javascript : functionality and dynamic behaviour.
 
 ## Usage
 
-1.Open index.html in a web browser.
-2.Click the Start Quiz button to begin.
-3.Select an answer for each question and navigate using the Next and Previous buttons.
-4.Click Finish to end the quiz or wait for the timer to expire.
-5.Your score will be displayed upon completion.
+1.Open index.html in a web browser.  
+2.Click the Start Quiz button to begin.  
+3.Select an answer for each question and navigate using the Next and Previous buttons.  
+4.Click Finish to end the quiz or wait for the timer to expire.  
+5.Your score will be displayed upon completion.  
 
 
 ## Author
