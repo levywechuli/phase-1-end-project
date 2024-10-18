@@ -2,7 +2,9 @@
 
 ## Questopedia Quiz Application
 
-This project is a quiz web application, it is a dynamic and enganging platform that is designed to enable users to be able to test thier knowledge through the quizes provided.This web application offers a user friendly interface and a variety of features that will meet yoour needs.
+This project is a quiz web application, it is a dynamic and engaging platform that is designed to enable users to be able to test their knowledge through the quizes provided. This web application offers a user-friendly interface and a variety of features that will meet your needs.
+
+## Screenshot
 
 ## Features
 
