@@ -2,13 +2,14 @@
 
 ## Questopedia Quiz Application
 
-This project is a quiz web application, it is a dynamic and engaging platform that is designed to enable users to be able to test their knowledge through the quizes provided. This web application offers a user-friendly interface and a variety of features that will meet your needs.
+This project is a quiz web application, it is a dynamic and engaging platform that is designed to enable users to be able to test their knowledge through the questions provided. This web application offers a user-friendly interface and a variety of features that will meet your needs.
 
 ## Screenshot
-
+![image alt](https://github.com/levywechuli/phase-1-end-project/blob/master/Screenshot%20from%202024-10-18%2022-09-00.png?raw=true)
+![image alt](https://github.com/levywechuli/phase-1-end-project/blob/master/Screenshot%20from%202024-10-18%2022-09-50.png?raw=true)
 ## Features
 
-**Interactive quiz interface:** start the quiz with abuttobn and navigate through the questions.   
+**Interactive quiz interface:** start the quiz with a button and navigate through the questions.   
 **Timer functionality:** a countdown timer to limit the duration of the test  
 **Score calculation:** the user recieves feedback at the end of their test.  
 **Navigation buttons:** previous and next buttons alllow users to navigate through the questions  
@@ -29,6 +30,9 @@ Javascript : functionality and dynamic behaviour.
 4.Click Finish to end the quiz or wait for the timer to expire.  
 5.Your score will be displayed upon completion.  
 
+## license
+
+This project is licensed under the MIT license.
 
 ## Author
 Questopedia was developed  by **Levy Wechuli**. You can reach out for feedback or contributions via [@wechulilevy60@gmail.com]
