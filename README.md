@@ -27,7 +27,6 @@ Javascript : functionality and dynamic behaviour.
 4.Click Finish to end the quiz or wait for the timer to expire.
 5.Your score will be displayed upon completion.
 
-
 ## Author
-Questopedia was developed  by **Levy Wechuli**. You can reach out for feedback or contributions via [@wechulilevy60@gmail.com]
 
+Questopedia was developed by **Levy Wechuli**. You can reach out for feedback or contributions via [@wechulilevy60@gmail.com]
