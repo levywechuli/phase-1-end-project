@@ -4,6 +4,12 @@
 
 This project is a quiz web application, it is a dynamic and enganging platform that is designed to enable users to be able to test thier knowledge through the quizes provided.This web application offers a user friendly interface and a variety of features that will meet yoour needs.
 
+## images
+
+![image alt](https://github.com/levywechuli/phase-1-end-project/blob/master/Screenshot%20from%202024-10-18%2022-09-00.png?raw=true)
+
+![image alt](https://github.com/levywechuli/phase-1-end-project/blob/master/Screenshot%20from%202024-10-18%2022-09-50.png?raw=true)
+
 ## Features
 
 **Interactive quiz interface:** start the quiz with abuttobn and navigate through the questions.  
