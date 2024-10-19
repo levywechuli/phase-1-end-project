@@ -36,7 +36,7 @@
   });
 
   function fetchQuestions() {
-    fetch("https://questopedia.onrender.com")
+    fetch("https://questopedia.onrender.com/questions")
       .then((Response) => Response.json())
       .then(data => {
         questions = data;
