@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', ()=> {
  let currentQuestionIndex = 0;
  let timerInterval;
   const totalTime = 400;
@@ -162,3 +163,4 @@
     document.getElementById(`quiz-container`).appendChild(scoreContainer);
   }
 
+});
